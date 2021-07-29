@@ -5,20 +5,22 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { UserListComponent } from './user/user-list/user-list.component';
+import * as user from './user';
 
 @NgModule({
   declarations: [
-    AppComponent, UserListComponent
+    AppComponent, user.UserListComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,AppRoutingModule, 
     MatSliderModule, MatTableModule, MatPaginatorModule, MatButtonModule,
+    MatMenuModule,
     BrowserAnimationsModule
   ],
   providers: [],
